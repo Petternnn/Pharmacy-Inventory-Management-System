@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pharmacy Inventory Management System</title>
+  <link rel="stylesheet" href="./src/css/style.css" />
+</head>
+<body>
+
+  <!-- Container -->
+  <div class="container">
+    <h1>Pharmacy Inventory Management</h1>
+    <div class="divider"></div>
+
+    <!-- Form: Add New Medicine -->
+    <form id="medicine-form" class="form-container">
+      <label for="productName">Product Name:</label>
+      <input type="text" id="productName" required />
+
+      <label for="manufacturer">Manufacturer:</label>
+      <input type="text" id="manufacturer" required />
+
+      <label for="expirationDate">Expiration Date (ISO 8601):</label>
+      <input type="date" id="expirationDate" required />
+
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" min="1" required />
+
+      <!-- Extra property for demonstration of inheritance -->
+      <label for="prescriptionRequired">Prescription Required?</label>
+      <select id="prescriptionRequired">
+        <option value="Yes">Yes</option>
+        <option value="No" selected>No</option>
+      </select>
+      
+      <!-- Submit Button -->
+      <button type="submit" class="btn-submit">Add Medicine</button>
+    </form>
+    <div class="divider"></div>
+
+    <!-- Feedback or Error Message -->
+    <p id="form-feedback" class="feedback"></p>
+
+    <!-- Display area for the data table -->
+    <table class="medicine-table">
+      <thead>
+        <tr>
+          <th>Product ID</th>
+          <th>Name</th>
+          <th>Manufacturer</th>
+          <th>Expiration</th>
+          <th>Quantity</th>
+          <th>Prescription?</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="medicine-table-body">
+        <!-- Dynamic rows will be added here by JS -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="./src/js/app.js"></script>
+</body>
+</html>
