@@ -19,3 +19,5 @@ A simple, class-based (ES6) JavaScript application for managing a pharmacy's inv
 - HTML
 - CSS
 - JavaScript
+
+deployed link: https://pharmacy-inventory-management-system.netlify.app
